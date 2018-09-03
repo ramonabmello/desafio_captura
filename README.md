@@ -18,4 +18,4 @@ python manage.py test
 
 ### Questions
 
-Read the answers openning the questions.txt file.
+Read the answers openning the questions.txt file...
