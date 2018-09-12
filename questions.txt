@@ -1,0 +1,37 @@
+1. Agora você tem de capturar dados de outros 100 sites. Quais seriam suas
+estratégias para escalar a aplicação?
+
+Há algumas maneiras de responder essa pergunta. Do ponto de vista da
+mantenabilidade do código, do ponto de vista de armazenamento de dados e do
+ponto de vista de escalabilidade da solução, no sentido de ser capaz de fazer
+requisição a vários sites ao mesmo tempo. Porém, ainda não tenho conhecimento
+suficiente para dar uma resposta clara.
+
+
+2. Alguns sites carregam o preço através de JavaScript. Como faria para
+capturar esse valor?
+
+Para capturar esse valor, usaria o Selenium para encontrar o elemento pelo
+nome da classe. Tive a opção de usar esta ferramenta no desafio para capturar
+as variações de cor ou tamanho de alguns produtos. Porém, decidi não usar, pois
+o resultado seria com vários produtos de nomes diferentes, porém, com mesmo
+Título de Página e mesma URL.
+
+
+3. Alguns sites podem bloquear a captura por interpretar seus acessos como um
+ataque DDOS. Como lidaria com essa situação?
+
+Seria preciso investigar o site e entender como faz o bloqueio da captura.
+Então, faria um crawler de acordo com esse mecanismo. O que costuma ser feito é
+usar um IP diferente para cada requisição, de maneira aleatória.
+
+
+4. Um cliente liga reclamando que está fazendo muitos acessos ao seu site e
+aumentando seus custos com infra. Como resolveria esse problema?
+
+Ao invés do crawler acessar as URLs toda vez que fosse executado, acessaria o
+site apenas uma vez para salvar as URLs em um arquivo de texto. Nas outras
+vezes que o crawler fosse executado, acessaria diretamente este arquivo que
+contém as URLs salvas e, caso alguma URL do site, que precisasse ser parseada,
+não estivesse dentro do arquivo, o crawler acessaria somente esta URL e
+salvaria no arquivo existente.
